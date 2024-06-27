@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+</head>
+
+<body class="flex flex-col justify-center items-center min-h-screen p-8" style="font-family: Inter;">
+    <div class="w-full max-w-md">
+        <div class="buat-text mb-6">
+            <h1 class="text-3xl font-extrabold text-[#4F4F4F]">Your To Do</h1>
+        </div>
+        <!-- input todo -->
+        <form id="todo-form" class="flex items-center mb-6">
+            <input id="todo-input" type="text" placeholder="Add new task"
+                class="border-b-2 border-[#9F9F9F] p-2 flex-grow focus:outline-none">
+            <button type="submit" class="ml-4 bg-[#4F4F4F] text-white p-2 rounded-xl focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+                </svg>
+            </button>
+        </form>
+        <ul id="todo-list" class="space-y-5"></ul>
+        <!-- todo count -->
+        <div id="remaining-todos" class="text-[#4F4F4F] text-normal italic font-semibold mt-5">Your remaining todos :
+            <span id="remaining-count">0</span></div>
+        <!-- quote section -->
+        <div id="motivation" class="text-[#9F9F9F] text-normal italic mt-3"></div>
+    </div>
+
+    <!-- modal warning -->
+    <div id="modal" class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-5 hidden">
+        <div class="bg-white p-7 rounded-lg shadow-lg max-w-md w-full">
+            <div class="flex justify-between items-center">
+                <h2 class="text-xl font-bold text-[#4F4F4F]">Warning</h2>
+                <button id="close-modal" class="text-[#4F4F4F] text-xl font-bold">✖</button>
+            </div>
+            <p class="mt-2 text-[#4F4F4F]">Please enter a task before adding.</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
+
